@@ -1,0 +1,14 @@
+{
+  "name": "trabalho1",
+  "version": "1.0.0",
+  "description": "Trabalho 1 de programação para internet 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustavo Leão Nogueira de Oliveira",
+  "license": "ISC",
+  "devDependencies": {
+    "w3-css": "^4.1.0"
+  }
+}
