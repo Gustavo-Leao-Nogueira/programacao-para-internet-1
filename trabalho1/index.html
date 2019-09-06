@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Trabalho 1 - Programação para Internet 1</title>
+
+    <link rel="stylesheet" href="node_modules/w3-css/3/w3.css" />
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="js/escript.js"></script>
+</head>
+
+<body>
+
+    <header class="w3-container  w3-green w3-round">
+        <h1 class="w3-center">Nomes</h1>
+        <p class="w3-center">Gustavo Leão Nogueira de Oliveira e Bárbara Kullmann</p>
+    </header>
+
+    <section class="w3-container w3-display-container tamanho  w3-round">
+        <div class="w3-display-middle">
+            <h3 class="w3-center w3-light-green">Cadastro de Novos Usuários</h3>
+            <form method="GET" action="view/pagina.html" autocomplete="on">
+                <section class="w3-card  ">
+                    <header class="w3-light-green w3-center">
+                        <h3>Dados Pessoais:</h3>
+                    </header>
+
+                    <div class="w3-row-padding">
+                        <div class="w3-half">
+                            <label for="nome"> Nome Completo: </label>
+                        </div>
+                        <div class="w3-half">
+                            <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo"
+                                class="w3-input" onkeyup="teste()" autofocus required />
+                        </div>
+                        <div class="w3-half">
+                            <label for="endereco"> Endereço: </label>
+                        </div>
+                        <div class="w3-half">
+                            <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço"
+                                class="w3-input" required />
+                        </div>
+                        <div class="w3-half">
+                            <label for="cidade"> Cidade: </label>
+                        </div>
+                        <div class="w3-half">
+                            <input type="text" name="cidade" list="cidade" placeholder="Escolha a sua cidade"
+                                class="w3-input" required />
+                            <datalist id="cidade">
+                                <optgroup label="Região Norte">
+                                    <option value="Rio Branco"></option>
+                                    <option value="Macapá"></option>
+                                    <option value="Manaus"></option>
+                                    <option value="Belém"></option>
+                                    <option value="Porto Velho"></option>
+                                    <option value="Boa Vista"></option>
+                                    <option value="Palmas"></option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="Maceió"></option>
+                                    <option value="Salvador"></option>
+                                    <option value="Fortaleza"></option>
+                                    <option value="São Luís"></option>
+                                    <option value="João Pessoa"></option>
+                                    <option value="Recife"></option>
+                                    <option value="Teresina"></option>
+                                    <option value="Natal"></option>
+                                    <option value="Aracaju"></option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="Goiânia"></option>
+                                    <option value="Cuiabá"></option>
+                                    <option value="Campo Grande"></option>
+                                    <option value="Brasília"></option>
+                                </optgroup>
+                                <option value="Vitória"></option>
+                                <option value="Belo Horizonte"></option>
+                                <option value="São Paulo"></option>
+                                <option value="Rio de Janeiro"></option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="Curitiba"></option>
+                                    <option value="Porto Alegre"></option>
+                                    <option value="Florianópolis"></option>
+                                </optgroup>
+                            </datalist>
+                        </div>
+                        <div class="w3-half">
+                            <label for="estado"> Estado: </label>
+                        </div>
+                        <div class="w3-half">
+                            <select class="w3-select" name="estado" id="estado" required>
+                                <option value="">Selecione</option>
+                                <optgroup label="Região Norte">
+                                    <option value="Acre">Acre</option>
+                                    <option value="Amapá">Amapá</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Pará">Pará</option>
+                                    <option value="Rondônia">Rondônia</option>
+                                    <option value="Roraima">Roraima</option>
+                                    <option value="Tocantins">Tocantins</option>
+                                </optgroup>
+                                <optgroup label="Região Nordeste">
+                                    <option value="Alagoas">Alagoas</option>
+                                    <option value="Bahia">Bahia</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Maranhão">Maranhão</option>
+                                    <option value="Paraíba">Paraíba</option>
+                                    <option value="Pernambuco">Pernambuco</option>
+                                    <option value="Piauí">Piauí</option>
+                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                    <option value="Sergipe">Sergipe</option>
+                                </optgroup>
+                                <optgroup label="Região Centro-Oeste">
+                                    <option value="Goiás">Goiás</option>
+                                    <option value="Mato Grosso">Mato Grosso</option>
+                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                    <option value="Distrito Federal">Distrito Federal</option>
+                                </optgroup>
+                                <optgroup label="Região Sudeste">
+                                    <option value="Espírito Santo">Espírito Santo</option>
+                                    <option value="Minas Gerais">Minas Gerais</option>
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                </optgroup>
+                                <optgroup label="Região Sul">
+                                    <option value="Paraná">Paraná</option>
+                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                    <option value="Santa Catarina">Santa Catarina</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section class="w3-card ">
+                    <header class="w3-center w3-light-green">
+                        <h3>Dados do Sistema:</h3>
+                    </header>
+                    <div class="w3-row-padding">
+                        <label for="usuario" class="w3-half">
+                            Nome de usuário:
+                        </label>
+                        <div class="w3-half">
+                            <input type="text" name="usuario" id="usuario" placeholder="Digite o nome do usuário"
+                                class="w3-input" required />
+                        </div>
+                        <label for="senha" class="w3-half">
+                            Senha:
+                        </label>
+                        <div class="w3-half">
+                            <input type="password" name="senha" id="senha" class="w3-input" required />
+                        </div>
+                        <label for="senhaConfirmacao" class="w3-half">
+                            Confirme a senha:
+                        </label>
+                        <div class="w3-half">
+                            <input type="password" name="senhaConfirmacao" id="senhaConfirmacao" class="w3-input"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="w3-display-container tamanho1">
+                        <div class="w3-display-bottomright w3-padding">
+                            <input type="submit" class="w3-button w3-light-green w3-round" value="Cadastrar Usuário"
+                                onclick="verificar()">
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
