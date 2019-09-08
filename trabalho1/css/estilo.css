@@ -3,5 +3,14 @@
 }
 .tamanho1 {
     height: 50px;
-    
 }
+
+.esse-card {
+    width: 500px;
+    padding: 50px;
+}
+
+.esse-card .w3-card {
+    padding: 50px;
+}
+

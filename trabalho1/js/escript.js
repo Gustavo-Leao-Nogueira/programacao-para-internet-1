@@ -14,17 +14,12 @@ function verificar() {
     let senha = document.querySelector("#senha");
     let senhaConfirmacao = document.querySelector("#senhaConfirmacao");
 
-    if (nome.value == "") { event.preventDefault(); }
-    else if (endereco.value == "") { event.preventDefault(); }
-    else if (cidade.value == "") { event.preventDefault(); }
-    else if (estado.value == "") { event.preventDefault(); }
-    else if (usuario.value == "") { event.preventDefault(); }
-    else if (senha.value == "") { event.preventDefault(); }
-    else if (senhaConfirmacao.value == "") { event.preventDefault(); }
-    else if (senha.value != senhaConfirmacao.value) {
+
+    if (senha.value != senhaConfirmacao.value) {
         alert('Senhas diferentes, tente novamente!');
         event.preventDefault();
     }
+    
     else {
         let obj = {
             "nome": nome.value,
@@ -41,12 +36,12 @@ function verificar() {
 
 function lerObjeto() {
     let obj = JSON.parse(localStorage.getItem('banco'));
-    document.write("<p><b>Nome:</b> " + obj["nome"] + "</p>");
-    document.write("<p><b>Endereço:</b> " + obj["endereco"] + "</p>");
-    document.write("<p><b>Cidade:</b> " + obj["cidade"] + "</p>");
-    document.write("<p><b>Estado:</b> " + obj["estado"] + "</p>");
-    document.write("<p><b>Usuário:</b> " + obj["usuario"] + "</p>");
-    document.write("<p><b>Senha:</b> ");
+    document.write("<p><b class=\"w3-text-light-green\">Nome:</b> " + obj["nome"] + "</p>");
+    document.write("<p><b class=\"w3-text-green\">Endereço:</b> " + obj["endereco"] + "</p>");
+    document.write("<p><b class=\"w3-text-green\">Cidade:</b> " + obj["cidade"] + "</p>");
+    document.write("<p><b class=\"w3-text-green\">Estado:</b> " + obj["estado"] + "</p>");
+    document.write("<p><b class=\"w3-text-green\">Usuário:</b> " + obj["usuario"] + "</p>");
+    document.write("<p><b class=\"w3-text-green\">Senha:</b> ");
     for (let i = 0; i < obj["senha"].length; i++) {
         document.write("*");
     }
